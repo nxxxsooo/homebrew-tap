@@ -4,11 +4,19 @@ Homebrew tap for [`another`](https://github.com/nxxxsooo/another) — browse and
 manage coding-agent sessions, or move one into another agent.
 
 ```bash
+brew trust nxxxsooo/tap
 brew install nxxxsooo/tap/another
 ```
 
 Homebrew expands `nxxxsooo/tap` to this repository, so there is no need to
 `brew tap` first.
+
+Since Homebrew 6, `HOMEBREW_REQUIRE_TAP_TRUST` defaults to on and Homebrew
+refuses to load formulae or casks from an untrusted third-party tap, so the
+`brew trust` line is required rather than advisory. It records this tap in
+`~/.homebrew/trust.json`. Trusting a tap means agreeing to run code it
+ships; read the cask first if that matters to you. Older Homebrew versions
+load the tap directly and do not have the `trust` command.
 
 ## Contents
 
