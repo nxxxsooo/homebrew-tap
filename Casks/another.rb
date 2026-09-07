@@ -8,25 +8,25 @@ cask "another" do
         must_succeed:   false
   end
 
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
     on_arm do
-      sha256 "86dde799bb8de5ddbe2a405fed491147f866d51d9c2f15ad48c82d498ee51e93"
+      sha256 "3202d2d99d8516d508f4a098dece45bedc7da1941183078a8c22340950e7e41d"
       url "https://github.com/nxxxsooo/another/releases/download/v#{version}/another_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "c892214993d80524d4b031d3ddf650a8787cf931fa03a2ab4a44525a4a554b61"
+      sha256 "61f3512acdc50328c9ea3cc873489dd619a02fec01a47beba3a0551f08ddd386"
       url "https://github.com/nxxxsooo/another/releases/download/v#{version}/another_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "0c1192a5c61804986ec681ae2847c65d111c37354ca08afa6855b7e35ac36452"
+      sha256 "57dcd5782d75349e89af9d2e298ef464d78f454ae3ad380e14d98a8fa7a3bb1d"
       url "https://github.com/nxxxsooo/another/releases/download/v#{version}/another_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "ef6313fb758b2fab6239bbd6569e6d886c44ed9629e8c89f7c34d04d0a138f12"
+      sha256 "ab44929995626475e7efe050e55824f4d423cb0d8231d1f314c547cd3b721911"
       url "https://github.com/nxxxsooo/another/releases/download/v#{version}/another_#{version}_linux_amd64.tar.gz"
     end
   end
