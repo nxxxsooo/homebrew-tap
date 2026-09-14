@@ -8,25 +8,25 @@ cask "another" do
         must_succeed:   false
   end
 
-  version "0.15.0"
+  version "0.15.1"
 
   on_macos do
     on_arm do
-      sha256 "0ec576cb48e3ec0ce68306582fd826fda101b3e82af984b4a99ee34513761242"
+      sha256 "c129686cb5f0cc8eeec34be8c2995509ebef306247c58be2be66a95ec4bafbb1"
       url "https://github.com/nxxxsooo/another/releases/download/v#{version}/another_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "a6903842260ca92fa904a462974d5112060c4bfa9ed72654bff6110ce58fb83f"
+      sha256 "18fed9ec432e43deff2dd37988edca973b4493583bada61b9185821fb6d0bb45"
       url "https://github.com/nxxxsooo/another/releases/download/v#{version}/another_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "de5450f697bdc68281249308eef9c700c2e0bb680f1e9c02b876f654a9e0bb1f"
+      sha256 "5dd41a208166376bf4384d6e26d8d7f400eb21c11ceb2e4dbe8e54fb8233a6e1"
       url "https://github.com/nxxxsooo/another/releases/download/v#{version}/another_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "684f6f56c64c28039278d473683067cbdf01a34938e82dd7dc94df9f4bfb4e82"
+      sha256 "cd5facd7d39a367154b4b781013406487a24310ced19c988d1edcf6a241eb6ae"
       url "https://github.com/nxxxsooo/another/releases/download/v#{version}/another_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -46,4 +46,8 @@ cask "another" do
       "~/.config/another",
     ]
 
+  caveats <<~EOS
+    On its first interactive launch, another adds the shell alias a if that
+    name is free. Open a new shell afterwards, or run another aliases install.
+  EOS
 end
