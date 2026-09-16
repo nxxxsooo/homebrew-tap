@@ -1,11 +1,12 @@
 # homebrew-tap
 
-Homebrew tap for [`another`](https://github.com/nxxxsooo/another) — browse and
-manage coding-agent sessions, or move one into another agent.
+Homebrew tap for [`another`](https://github.com/nxxxsooo/another) and
+[`jumpotp`](https://github.com/nxxxsooo/jumpotp).
 
 ```bash
 brew trust nxxxsooo/tap
 brew install nxxxsooo/tap/another
+brew install nxxxsooo/tap/jumpotp
 ```
 
 Homebrew expands `nxxxsooo/tap` to this repository, so there is no need to
@@ -28,6 +29,11 @@ tagged release. Edits made here are overwritten by the next release; change
 The cask covers macOS and Linux on both `amd64` and `arm64`. Release binaries
 are unsigned, so a postflight hook clears `com.apple.quarantine`; without it
 Gatekeeper terminates the first run.
+
+`Formula/jumpotp.rb` installs the verified GitHub Release binary for macOS
+Apple Silicon only. Its release checksum and version must be updated together
+when JumpOTP publishes a new version. The historical npm packages stop at
+`0.2.2` and are not required for this formula.
 
 `brew uninstall --zap another` also removes `~/.cache/another` and
 `~/.config/another`, the only directories `another` creates. Sessions belonging
