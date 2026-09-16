@@ -5,8 +5,8 @@ class Jumpotp < Formula
   sha256 "72ab43f3adee540390699b7df275a777c89a52ac246c9bf347dbe469a0dffdf0"
   license "Apache-2.0"
 
-  depends_on :macos
   depends_on arch: :arm64
+  depends_on :macos
 
   def install
     bin.install "jumpotp-darwin-arm64" => "jumpotp"
